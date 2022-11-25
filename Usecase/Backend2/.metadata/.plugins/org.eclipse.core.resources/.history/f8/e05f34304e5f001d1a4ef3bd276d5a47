@@ -1,0 +1,5 @@
+package com.digitalbooks.config;
+
+public class SwaggerConfig {
+
+}

@@ -1,0 +1,40 @@
+package com.book.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.book.entity.Book;
+
+@Service
+public class BookServiceImpl implements IBookService{
+	
+	
+	@Autowired
+	IBookRepo bookrepo;
+
+	@Override
+	public Integer saveBook(Book book) {
+		// This will add the book in the application
+		Book savedBook = bookrepo.save(book);
+		return savedBook.getId();
+	}
+	
+	@Override
+	public Optional<Book> getBook(Integer id) {
+		// This will display the book by id
+		getbook= bookrepo.getById(id)
+		return null;
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		// This will get all the book available in the library
+		return bookrepo.findAll();
+	}
+
+	
+
+}

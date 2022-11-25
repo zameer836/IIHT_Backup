@@ -1,0 +1,59 @@
+package com.Employee.Entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Employee {
+	
+	private Integer id;
+	private String name;
+	private Integer salary;
+	private String emp_position;
+	private String qualification;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getSalary() {
+		return salary;
+	}
+	public void setSalary(Integer salary) {
+		this.salary = salary;
+	}
+	public String getEmp_position() {
+		return emp_position;
+	}
+	public void setEmp_position(String emp_position) {
+		this.emp_position = emp_position;
+	}
+	public String getQualification() {
+		return qualification;
+	}
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	public Employee(Integer id, String name, Integer salary, String emp_position, String qualification) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.emp_position = emp_position;
+		this.qualification = qualification;
+	}
+	public Employee() {
+		super();
+	}
+	
+	
+	
+	
+
+}

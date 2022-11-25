@@ -1,0 +1,39 @@
+package sort;
+
+public class CourseData {
+	private int age;
+	private String course_name;
+	
+	public CourseData(int age, String course_name) {
+		super();
+		this.age = age;
+		this.course_name = course_name;
+		
+	
+	
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getCourse_name() {
+		return course_name;
+	}
+
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
+	}
+
+	@Override
+	public String toString() {
+		return "CourseData [age=" + age + ": course_name=" + course_name + "]";
+		
+	}
+	
+	
+}

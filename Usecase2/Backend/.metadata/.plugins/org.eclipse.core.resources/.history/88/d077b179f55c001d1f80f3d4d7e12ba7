@@ -1,0 +1,14 @@
+package com.user.microservice.UserMicroService.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.user.microservice.UserMicroService.entity.model.Book;
+
+
+@Repository
+public interface UserRepository extends JpaRepository<Book, Integer>{
+	
+	
+
+}

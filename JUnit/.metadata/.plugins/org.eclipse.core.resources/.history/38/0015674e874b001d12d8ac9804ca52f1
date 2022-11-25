@@ -1,0 +1,102 @@
+package Arraylist;
+
+
+	// This imports the scanner package to take in user input
+
+	import java.util.Scanner;
+
+	// here we create class student
+
+	public class Student {
+
+	//Then we declare variables to be used in the program that represent the student. Public to be accessed from anyway in the program.
+
+	public String name ;        //student first name
+
+	public String age;         //Student Age
+
+	public String sex;                    //Student Gender
+
+	 
+
+	 //Setter and Getter Methods for the Student Class Attributes
+
+	public void setName(String name) {
+
+	this.name = name;
+
+	}
+
+	public String getName() {
+
+	return name;
+
+	}
+
+	 
+
+	public void setAge(String age) {
+
+	this.age = age;
+
+	}
+
+	public String getAge() {
+
+	return age;
+
+	}
+
+	 
+
+	public void setSex(String sex) {
+
+	this.sex = sex;
+
+	}
+
+	public String getSex() {
+
+	return sex;
+
+	}
+
+	 
+
+	//Student Class Constructor
+
+	public Student() {
+
+	Scanner n = new Scanner(System.in);
+
+	System.out.print("First Name: ");
+
+	this.setName(n.next());
+
+	 
+
+	System.out.print("Age: ");
+
+	this.setAge(n.next());
+
+	 
+
+	System.out.print("Gender: ");
+
+	this.setSex(n.next());
+
+	}//End of constructor
+
+	}//End of Student class
+
+	 
+
+	//This is the class that contains the main method and it uses arrays.
+
+	 
+
+	//Start of array class
+
+	
+
+

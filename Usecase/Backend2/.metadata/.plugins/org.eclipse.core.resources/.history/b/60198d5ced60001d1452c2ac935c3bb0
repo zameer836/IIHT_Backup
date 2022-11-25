@@ -1,0 +1,12 @@
+
+
+spring.datasource.url=jdbc:digitalbooksdb2.cqm4wq74nhkr.us-east-1.rds.amazonaws.com:3306/authordetails?UseSSL=false
+spring.datasource.username=root
+spring.datasource.password=pass@word1
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+
+spring.mvc.pathmatch.matching-strategy= ant-path-matcher
+
+spring.jpa.hibernate.ddl-auto=update
+server.port=5000

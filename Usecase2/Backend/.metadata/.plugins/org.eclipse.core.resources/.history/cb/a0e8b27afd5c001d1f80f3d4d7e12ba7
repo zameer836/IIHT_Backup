@@ -1,0 +1,9 @@
+package com.user.microservice.UserMicroService.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+@Repository
+public interface AuthorRepository extends JpaRepository<Author, Integer>{
+
+}

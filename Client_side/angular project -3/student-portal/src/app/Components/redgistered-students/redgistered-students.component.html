@@ -1,0 +1,19 @@
+<ul class="list-group">
+    <li *ngFor="let s of students; index as i" class="list-group-item">
+        <span>
+            {{s.firstname}}
+        </span>
+        <span>
+            {{s.lastname}}
+        </span>
+        <span>
+            class : {{s.class}}
+        </span>
+        <br>
+        <button type="button" style="margin-left: 1450px; color: red; background-color: red;"
+        class="btn-close" aria-label="Close"></button>
+    </li>
+
+  </ul>
+  <button type="button" style="margin-left: 20px; margin-top: 10px" (click)="sort()"
+  class="btn btn-secondary">Sort based on Class</button>

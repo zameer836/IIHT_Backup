@@ -1,0 +1,5 @@
+package com.user.microservice.UserMicroService.model;
+
+public class Book {
+
+}

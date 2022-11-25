@@ -1,0 +1,5 @@
+package com.Employee.exception;
+
+public class ResourceNotFountException {
+
+}

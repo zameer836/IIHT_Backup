@@ -1,0 +1,11 @@
+package com.user.microservice.UserMicroService.entity.model;
+
+import java.io.Serializable;
+
+public class AuthPK implements Serializable {
+
+	private int id;
+
+	private int author_id;
+
+}

@@ -1,0 +1,111 @@
+<style>
+
+img{
+        margin-left: 590px;
+
+    }
+
+h2 {
+
+    margin-left: 540px;
+}
+
+label {
+    font-size: large;
+    
+}
+
+.form-control {
+
+    margin-left: 530px;
+}
+
+tr {
+    
+}
+
+button {
+    margin-left: 700px;
+}
+
+</style>
+
+<img src="https://cdn.dribbble.com/users/3032358/screenshots/11287340/38a_4x.jpg" width="100px" height="100px">
+
+<!-- <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+        <form [formGroup]="form" #searchInfo (ngSubmit)="searchForm(searchInfo)">
+            <table>
+                <tr>
+                    <td><input type="text" formControlName="title" placeholder="Enter title" class="form-control"></td>
+                    <td><input type="text" formControlName="author" placeholder="Enter author" class="form-control"></td>
+                    <td><button class="btn btn-primary hidden-xs">Search</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <br><br>
+
+    <div class="row">  
+        <div class="col-md-offset-4 col-md-4">  
+            <table class="table table-bordered table-striped table-responsive">  
+                <tr>  
+                    <th>Title</th>  
+                    <th>Author</th>  
+                    <th>Price</th>  
+                </tr>  
+                <ng-container *ngFor="let item of data">   
+                    <tr>  
+                        <td>{{item.title}}</td>  
+                        <td>{{item.author}}</td>  
+                        <td>{{item.price}}</td>  
+                    </tr>  
+                </ng-container>  
+            </table>  
+        </div>  
+    </div>  -->
+
+
+
+<h2>Search Books Here</h2>
+
+<table>
+    <tr>
+        <td>
+            <label  class="form-control">Title:</label>
+        </td>
+        <td>
+            <input [(ngModel)]="book.title" type="text" placeholder="Enter the book title">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="form-control">Author:</label>
+        </td>
+        <td>
+            <input [(ngModel)]="book.author" type="text" placeholder="Enter the Author Name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="form-control">Publisher:</label>
+        </td>
+        <td>
+            <input [(ngModel)]="book.publisher" type="text" placeholder="Enter the Publisher Name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="form-control">Price:</label>
+        </td>
+        <td>
+            <input [(ngModel)]="book.price" type="text" placeholder="Enter the Price">
+        </td>
+    </tr>
+    
+</table>
+<br>
+<button  (click)="searchbooks()">Search</button>

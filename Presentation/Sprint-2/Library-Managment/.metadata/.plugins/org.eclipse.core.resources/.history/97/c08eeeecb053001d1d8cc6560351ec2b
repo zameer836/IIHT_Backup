@@ -1,0 +1,22 @@
+package com.book.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.book.entity.Book;
+
+@Service
+public class BookServiceImpl implements IBookService{
+	
+	
+	@Autowired
+	IBookRepo bookrepo;
+
+	@Override
+	public Integer saveBook(Book book) {
+		// This will add the book in the application
+		Book savedBook = bookrepo.save(book);
+		return savedBook.getId();
+	}
+
+}

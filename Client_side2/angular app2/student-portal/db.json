@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "firstname": "Toto",
+      "lastname": "Woolf",
+      "class": 10,
+      "email": "toto@email.com",
+      "gender": "Male",
+      "id": 7
+    },
+    {
+      "firstname": "zameer",
+      "lastname": "mohd",
+      "class": 2,
+      "email": "mdzameer@gmail.com",
+      "gender": "Male",
+      "id": 8
+    },
+    {
+      "firstname": "zameer 3",
+      "lastname": "mohd",
+      "class": 0,
+      "email": "mdzameer@gmail.com",
+      "gender": "Male",
+      "id": 9
+    }
+  ]
+}

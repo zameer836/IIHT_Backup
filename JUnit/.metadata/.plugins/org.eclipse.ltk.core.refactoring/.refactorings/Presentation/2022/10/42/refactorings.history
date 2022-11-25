@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;examDatabase.NeetArray.java&apos; to &apos;NeetArrays.java&apos;&#x0D;&#x0A;- Original project: &apos;Presentation&apos;&#x0D;&#x0A;- Original element: &apos;examDatabase.NeetArray.java&apos;&#x0D;&#x0A;- Renamed element: &apos;examDatabase.NeetArrays.java&apos;" description="Rename compilation unit &apos;NeetArray.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;examDatabase{NeetArray.java" name="NeetArrays.java" references="false" stamp="1665731011204" version="1.0"/>
+</session>

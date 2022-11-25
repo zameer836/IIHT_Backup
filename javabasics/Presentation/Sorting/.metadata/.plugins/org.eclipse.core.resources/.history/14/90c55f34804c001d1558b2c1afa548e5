@@ -1,0 +1,8 @@
+package sort;
+
+public class CourseData {
+
+	public int courseID;
+	public String courseName;
+	
+}

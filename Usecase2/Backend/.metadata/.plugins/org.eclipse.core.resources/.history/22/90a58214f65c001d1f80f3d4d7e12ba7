@@ -1,0 +1,22 @@
+package com.user.microservice.UserMicroService.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.user.microservice.UserMicroService.entity.model.Book;
+
+
+@Repository
+public interface UserRepository extends JpaRepository<Book, Integer>{
+	
+	@Query("select * from book where title=?1 or author=?2"
+			+ "or publichser=?3 or category=?4 or price=?5")
+	public static Book guestUser(String category, String title, String author, String publisher, float price) {
+		return null;
+		
+	}
+	
+	
+
+}

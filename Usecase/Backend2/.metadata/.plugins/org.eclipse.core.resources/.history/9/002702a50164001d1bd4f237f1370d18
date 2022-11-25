@@ -1,0 +1,5 @@
+package com.digitalbooks.securityConfig;
+
+public class SecurityConfig {
+
+}

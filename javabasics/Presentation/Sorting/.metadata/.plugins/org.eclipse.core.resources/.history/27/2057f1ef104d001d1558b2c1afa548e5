@@ -1,0 +1,17 @@
+package sort;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SortCourseData {
+	
+	public static void main(String[] args) {
+		
+		List<CourseData> courselist = new ArrayList<>();
+		
+		courselist.add(new CourseData(27, "java"));
+		courselist.add(new CourseData(28, "python"));
+		System.out.println(courselist);
+	}
+	
+	}

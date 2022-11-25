@@ -1,0 +1,31 @@
+package com.digitalbooks.securityConfig;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+
+public class SecurityConfig {
+
+	
+	@Bean
+	public InMemoryUserDetailsManager user() {
+		return  new InMemoryUserDetailsManager(
+				User.withUsername("admins").password("{noop}PassWord").authorities("read").build());
+	}
+	
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		return http
+				.csrf(csrf -> csrf.disable())
+				.authorizeRequests(auth -> auth
+						.anyRequest().authenticated()
+						)
+				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+				.httpBasic(Customizer.withDefaults()).build();
+			
+	}
+}

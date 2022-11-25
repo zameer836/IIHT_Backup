@@ -1,0 +1,21 @@
+package com.base;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MathUtilsTest {
+
+	@Test
+	void test() {
+		System.out.println("this test ran");
+	}
+
+	@Test
+	void testAdd() {
+		MathUtils mathutils = new MathUtils();
+		int expected = 20;
+		int actual = mathutils.add(10, 10);
+		assertEquals(expected, actual);
+	}
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      
+      
+          
+      table {
+          
+          width: 100%;
+          border-spacing: 10px;
+          padding: 6px;
+
+      }
+      
+      .formContainter {
+       
+        margin-left: auto;
+        margin-right: auto;
+        background-color:white;
+        max-width: 800px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      
+      .identitydetails-form {
+          margin-top: 10px;
+      }
+      
+
+      td {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 8px;
+          padding-right: 8px;
+      }
+
+      .button-style {
+          background-color: #3154e4 ;
+          margin-left: 10px;
+          padding-left: 65px;
+          padding-right: 65px;
+          font-size: 18px;
+          font-weight: 500;
+      }
+
+    </style>
+    <script src="./index.js"></script> 
+    
+    
+  </head>
+
+
+  <body style = "background-color: #3154e4; padding: 30px; width:100vw">
+    <div class="formContainter">
+        <form action="./thankupage.html">
+            <h1>Registration</h1>
+            <div class="Personal-form">
+                <h4 style="color: gray;">Personal Details</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <label  class="control-label" for="fullName">Full Name</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="dob">Date of Birth</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="email">Email</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" id="fullname" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)" onblur="textVal(this.id)"
+                            placeholder="Enter your name" >
+                        </td>
+                        <td>
+                            <input type="date" class="form-control" id="dob" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)" 
+                            placeholder="Enter your Date of birth" >
+                        </td>
+                        <td>
+                            <input type="email" class="form-control" id="email" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)" onblur="textVal(this.id)"
+                            placeholder="Enter your mail ID" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="control-label" for="mobilenum">Mobile Number</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="gender">Gender</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="occupation">Occupation</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" id="mobilenum" onblur="textVal(this.id)" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter your mobile number" >
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="gender" onblur="genderVal(this.id)" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter your gender" >
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="occupation" onblur="textVal(this.id)" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter Occupation" reuired>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+            <div class="Identitydetails-form">        
+
+                    <h4 style="color: gray;">Identity Details</h4>
+                
+                    <table>
+                    <tr>
+                        <td>
+                            <label class="control-label" for="idtype">ID Type</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="idnum">ID Number</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="issueauth">Issue Authority</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" id="idtype" onblur="textVal(this.id)" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter ID type" >
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="idnum" onblur="textVal(this.id)" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter ID Number" >
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="issueauth" onblur="textVal(this.id)" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter issue Department" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="control-label" for="issuedate">Issue Date</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="issuestate">Issue State</label>
+                        </td>
+                        <td>
+                            <label class="control-label" for="expdate">Expiry Date</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" class="form-control" id="issuedate" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter ID issue Date" >
+                        </td>
+                        <td>
+                            <input type="date" class="form-control" id="issuestate" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter ID issue State" >
+                        </td>
+                        <td>
+                            <input type="date" class="form-control" id="expdate" onmouseover="changebgcolor(this.id)" onfocus="onHover(this.id)"
+                            placeholder="Enter ID Expiry Date" >
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>  
+            
+            <div>
+                <input id="thankupage" type="submit" class="btn btn-primary button-style" onclick="validateForm()" value="Next->">
+                <a href="thankupage.html" ></a>
+            </button>
+            </div>
+        </form>
+    </div>   
+  </body>
+</html>

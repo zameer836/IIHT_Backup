@@ -1,0 +1,5 @@
+package com.user.microservice.UserMicroService.service;
+
+public class RegisterUserRepo {
+
+}

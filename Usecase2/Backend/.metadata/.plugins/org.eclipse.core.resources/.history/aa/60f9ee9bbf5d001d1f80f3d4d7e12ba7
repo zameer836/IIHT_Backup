@@ -1,0 +1,7 @@
+package com.user.microservice.UserMicroService.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RegisterUserRepo extends JpaRepository<User, Integer> {
+
+}

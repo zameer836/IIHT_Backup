@@ -1,0 +1,23 @@
+package com.user.microservice.UserMicroService.repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+
+
+@Repository
+public interface UserRepository extends JpaRepository<Author, Integer>{
+
+	List<Author> findByCategory(@Param("category") String category);
+	
+//	@Query("select * from book where title=?1 or author=?2"
+//			+ "or publichser=?3 or category=?4 or price=?5")
+	
+	
+	
+
+}

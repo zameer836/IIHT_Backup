@@ -1,0 +1,27 @@
+package com.user.microservice.UserMicroService.entity.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class CompositeKey implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private int id;
+
+	private int author_id;
+
+	public AuthPK(int id, int author_id) {
+		super();
+		this.id = id;
+		this.author_id = author_id;
+	}
+	
+	
+
+}

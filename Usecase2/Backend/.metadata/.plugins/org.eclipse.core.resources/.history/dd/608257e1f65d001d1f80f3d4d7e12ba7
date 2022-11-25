@@ -1,0 +1,61 @@
+package com.user.microservice.UserMicroService.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+import com.user.microservice.UserMicroService.repo.AuthorRepository;
+
+@Service
+public class AuthorService {
+	
+	@Autowired
+	AuthorRepository authRepo;
+
+	public void createAuthor(Author author, Integer author_id) {
+		author.setAuthor_id(author_id);
+		authRepo.save(author);
+		
+	}
+	
+	public void saveOrUpdate(Author author,Integer id) throws Exception {
+		Author auth = authRepo.findById(id).orElseThrow(
+				()-> new Exception("not found"));
+		auth.setActive(author.getActive());
+		auth.setAuthor(author.getAuthor());
+		auth.setCategory(author.getCategory());
+		auth.setContent(author.getContent());
+		auth.setLogo(author.getLogo());
+		auth.setPrice(author.getPrice());
+		auth.setPublishedDate(author.getPublishedDate());
+		auth.setPublisher(author.getPublishedDate());
+		auth.setTitle(author.getTitle());
+		
+		authRepo.save(auth);
+		//authRepo.save(author);
+		
+	}
+	
+	public void blockStatus(Author author,Integer id, Integer book_id, String blocked) throws Exception {
+		Author auth = authRepo.findById(id).orElseThrow(
+				()-> new Exception("not found"));
+		if()
+		auth.setActive(author.getActive());
+		auth.setAuthor(author.getAuthor());
+		auth.setCategory(author.getCategory());
+		auth.setContent(author.getContent());
+		auth.setLogo(author.getLogo());
+		auth.setPrice(author.getPrice());
+		auth.setPublishedDate(author.getPublishedDate());
+		auth.setPublisher(author.getPublishedDate());
+		auth.setTitle(author.getTitle());
+		
+		authRepo.save(auth);
+		//authRepo.save(author);
+		
+	}
+	
+	
+
+}

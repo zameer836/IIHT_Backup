@@ -1,0 +1,33 @@
+package com.user.microservice.UserMicroService.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+import com.user.microservice.UserMicroService.repo.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	UserRepository repo;
+
+//	@Query("select * from book where title=?1 or author=?2"
+//			+ "or publichser=?3 or category=?4 or price=?5")
+	public List<Author> guestUser(String category, String title, String author, String publisher, Float price) {
+		List<Author> authorList=null;
+		if(category!=null && title==null && author==null && publisher==null && price==null) {
+		authorList=repo.findByCategory(category);
+		}
+		return authorList;
+		
+	}
+
+//	public Book save(Book book) {
+//		// TODO Auto-generated method stub
+//		//return repo.save(book);
+//	}
+
+}

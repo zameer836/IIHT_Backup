@@ -1,0 +1,41 @@
+package com.base;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
+
+class MathUtilsTest {
+
+	@Test
+	void test() {
+		System.out.println("this test ran");
+	}
+
+	@Test
+	void testAdd() {
+		MathUtils mathutils = new MathUtils();
+		int expected = 20;
+		int actual = mathutils.add(10, 10);
+		assertEquals(expected, actual);
+		//asserEquals(expcted and actual)
+		//assertArrayEquals(expectedarray)
+		
+		
+		
+			
+		}
+		
+	 
+	private MathUtils mathUtils;
+	
+	@BeforeEach
+	void initEach() {
+		mathUtils = new MathUtils();
+	}
+	
+	@Nested
+	class AddTest{
+		
+	}
+}

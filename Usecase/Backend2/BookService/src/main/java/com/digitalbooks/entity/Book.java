@@ -1,0 +1,156 @@
+package com.digitalbooks.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Book {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long bookId;
+	
+	private String title;
+	private String category;
+	private Double price;
+	private  String author;
+	private String publisher;
+	private String publishedDate;
+	private String content;
+	private Boolean active;
+	private Long subscriptionId;
+	private Long autorId;
+	private Long readerId;
+	private String subscribed;
+	private String blocked;
+	private String logo;
+	
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public Book(Long bookId, String title, String category, Double price, String author, String publisher,
+			String publishedDate, String content, Boolean active, Long subscriptionId, Long autorId, Long readerId,
+			String subscribed, String blocked, String logo) {
+		super();
+		this.bookId = bookId;
+		this.title = title;
+		this.category = category;
+		this.price = price;
+		this.author = author;
+		this.publisher = publisher;
+		this.publishedDate = publishedDate;
+		this.content = content;
+		this.active = active;
+		this.subscriptionId = subscriptionId;
+		this.autorId = autorId;
+		this.readerId = readerId;
+		this.subscribed = subscribed;
+		this.blocked = blocked;
+		this.logo = logo;
+	}
+	public Long getBookId() {
+		return bookId;
+	}
+	public void setBookId(Long bookId) {
+		this.bookId = bookId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getPublisher() {
+		return publisher;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	public String getPublishedDate() {
+		return publishedDate;
+	}
+	public void setPublishedDate(String publishedDate) {
+		this.publishedDate = publishedDate;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Boolean getActive() {
+		return active;
+	}
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+	public Long getSubscriptionId() {
+		return subscriptionId;
+	}
+	public void setSubscriptionId(Long subscriptionId) {
+		this.subscriptionId = subscriptionId;
+	}
+	public Long getAutorId() {
+		return autorId;
+	}
+	public void setAutorId(Long autorId) {
+		this.autorId = autorId;
+	}
+	public Long getReaderId() {
+		return readerId;
+	}
+	public void setReaderId(Long readerId) {
+		this.readerId = readerId;
+	}
+	public String getSubscribed() {
+		return subscribed;
+	}
+	public void setSubscribed(String subscribed) {
+		this.subscribed = subscribed;
+	}
+	public String getBlocked() {
+		return blocked;
+	}
+	public void setBlocked(String blocked) {
+		this.blocked = blocked;
+	}
+	public String getLogo() {
+		return logo;
+	}
+	public void setLogo(String logo) {
+		this.logo = logo;
+	}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", title=" + title + ", category=" + category + ", price=" + price
+				+ ", author=" + author + ", publisher=" + publisher + ", publishedDate=" + publishedDate + ", content="
+				+ content + ", active=" + active + ", subscriptionId=" + subscriptionId + ", autorId=" + autorId
+				+ ", readerId=" + readerId + ", subscribed=" + subscribed + ", blocked=" + blocked + ", logo=" + logo
+				+ "]";
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,37 @@
+package com.user.microservice.UserMicroService.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Employee.Entity.Employee;
+import com.Employee.exception.ResourceNotFoundException;
+import com.user.microservice.UserMicroService.entity.model.Author;
+import com.user.microservice.UserMicroService.repo.AuthorRepository;
+
+@Service
+public class AuthorService {
+	
+	@Autowired
+	AuthorRepository authRepo;
+
+	public void createAuthor(Author author) {
+		authRepo.save(author);
+		
+	}
+	
+	public void saveOrUpdate(Author author,Integer id) {
+		Author existingEmployee = authRepo.findById(id).orElseThrow(
+				()-> new Exception("not found");
+		existingEmployee.setName(employee.getName());
+		existingEmployee.setEmp_position(employee.getEmp_position());
+		existingEmployee.setSalary(employee.getSalary());
+		existingEmployee.setQualification(employee.getQualification());
+		
+		employeeRepo.save(existingEmployee);
+		authRepo.save(author);
+		
+	}
+	
+	
+
+}

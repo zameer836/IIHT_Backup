@@ -1,0 +1,58 @@
+package com.book.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Employee.Entity.Employee;
+import com.book.entity.Book;
+import com.book.service.IBookService;
+
+
+
+@RestController
+public class BookController {
+	
+	@Autowired
+	IBookService bookservice;
+	
+	@PostMapping("/save")
+	Integer CreateBook(@RequestBody Book book) {
+		Integer id= bookservice.saveBook(book);
+		return id;
+	}
+	
+	@GetMapping("/getBookById/{id}")
+	public Optional<Book> getBook(@PathVariable Integer id) {
+		Optional<Book> book = bookservice.getBook(id);
+		return book;
+	}
+	
+	@GetMapping("/getAllBooks")
+	List<Book> getAllBooks() {
+		List<Book> books= bookservice.getAllBooks();
+		return books;
+	}
+	
+	@PutMapping("/updateBook/{id}")
+	public ResponseEntity<Book> updateBook(@PathVariable ("id") Integer id, @RequestBody Employee employee) {
+		
+		return new ResponseEntity<Book>(bookservice.updateBook(book, id), HttpStatus.OK);
+	}
+	
+//	@PutMapping("/update/{id}")
+//	public ResponseEntity<Employee> updateEmployee(@PathVariable ("id") Integer id, @RequestBody Employee employee) {
+//		return new ResponseEntity<Employee>(employeeService.updateEmployee(employee, id), HttpStatus.OK);
+//	}
+	
+
+}

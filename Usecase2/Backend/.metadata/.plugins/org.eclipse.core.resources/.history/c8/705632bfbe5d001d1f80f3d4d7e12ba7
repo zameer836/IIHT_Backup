@@ -1,0 +1,19 @@
+package com.user.microservice.UserMicroService.entity.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class User {
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String email_id;
+	
+	private String password;
+	
+	
+	
+
+}

@@ -1,0 +1,56 @@
+package com.user.microservice.UserMicroService.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+import com.user.microservice.UserMicroService.entity.model.Login;
+import com.user.microservice.UserMicroService.entity.model.User;
+import com.user.microservice.UserMicroService.repo.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	UserRepository repo;
+	
+	@Autowired
+	RegisterUserRepo userRepo;
+
+//	@Query("select * from book where title=?1 or author=?2"
+//			+ "or publichser=?3 or category=?4 or price=?5")
+	public List<Author> guestUser(String category, String title, String author, String publisher, Float price) {
+		List<Author> authorList=null;
+		if(category!=null && title==null && author==null && publisher==null && price==null) {
+		authorList=repo.findByCategory(category);
+		}else if(category==null && title!=null && author==null && publisher==null && price==null) {
+			authorList=repo.findByTitle(title);
+		}else if(category==null && title==null && author!=null && publisher==null && price==null) {
+			authorList=repo.findByAuthor(author);
+		}else if(category==null && title==null && author==null && publisher!=null && price==null) {
+			authorList=repo.findByPublisher(publisher);
+		}else if(category==null && title==null && author==null && publisher==null && price!=null) {
+			authorList=repo.findByPrice(price);
+		}else {
+			//repo.find
+			//authorList=repo.findByCategoryTitleAuthorPublisherPrice(category, title, author, publisher, price);
+		}
+		return authorList;
+		
+	}
+
+	public void signUp(User user) {
+		userRepo.save(user);
+	}
+	
+	public String  login(Login login) {
+		User usr=userRepo.findByEmailId(login.getEmail_id());
+		
+		if(login.getEmail_id().equals(usr.getEmail_id()) &&(login.getPassword().equals(usr.getPassword()))) {
+			
+		}
+	}
+
+}

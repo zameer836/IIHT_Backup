@@ -1,0 +1,20 @@
+package com.digitalbooks.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.digitalbooks.entity.Book;
+import com.digitalbooks.repository.IBookRepo;
+
+public class BookServiceImpl implements IBookService {
+	
+	@Autowired
+	IBookRepo bookRepo;
+
+	@Override
+	public Book saveBook(Book book) {
+		// This will save the book
+		Book savedBook = bookRepo.save(book);
+		return savedBook;
+	}
+
+}

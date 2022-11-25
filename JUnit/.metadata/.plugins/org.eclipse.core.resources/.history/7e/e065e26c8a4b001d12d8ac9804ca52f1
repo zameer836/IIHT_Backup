@@ -1,0 +1,16 @@
+package examDatabase;
+
+public class Neetdetails {
+	
+	public Integer courseid ;        
+
+	public String coursename;         
+
+	public String courseteacher; 
+	
+	public Integer duration ;        
+
+	public Integer fees;        
+
+
+}

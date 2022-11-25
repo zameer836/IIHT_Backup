@@ -1,0 +1,27 @@
+package com.user.microservice.UserMicroService.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+import com.user.microservice.UserMicroService.repo.AuthorRepository;
+
+@Service
+public class AuthorService {
+	
+	@Autowired
+	AuthorRepository authRepo;
+
+	public void createAuthor(Author author) {
+		authRepo.save(author);
+		
+	}
+	
+	public void saveOrUpdate(Author author) {
+		authRepo.save(author);
+		
+	}
+	
+	
+
+}

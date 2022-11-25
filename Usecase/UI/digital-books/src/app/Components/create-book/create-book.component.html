@@ -1,0 +1,85 @@
+<style>
+
+    img{
+            margin-left: 590px;
+    
+        }
+    
+    h2 {
+    
+        margin-left: 580px;
+    }
+    
+    label {
+        font-size: large;
+        
+    }
+    
+    .form-control {
+    
+        margin-left: 420px;
+    }
+    
+    tr {
+        
+    }
+    
+    button {
+        margin-left: 620px;
+    }
+
+    .input-content-box {
+        height: 40px;
+    }
+    
+    </style>
+    
+    <img src="https://cdn.dribbble.com/users/3032358/screenshots/11287340/38a_4x.jpg" width="100px" height="100px">
+    
+    <h2>Create Book</h2>
+    
+    <table>
+        <tr>
+            <td>
+                <label class="form-control">Title:</label>
+            </td>
+            <td>
+                <input  [(ngModel)]="book.title" type="text" placeholder="Enter the book title">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label   class="form-control">Category:</label>
+            </td>
+            <td>
+                <input  [(ngModel)]="book.category" type="text" placeholder="Enter the Book Category">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label  class="form-control">Image:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="book.image" type="text" placeholder="Add image here">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label  class="form-control">Price:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="book.price" type="text" placeholder="Enter the Book Price">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-control">Publisher:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="book.publisher" type="text" placeholder="Enter the Publisher Name">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button routerLink="/success" (click)="save()">Save</button>
+    

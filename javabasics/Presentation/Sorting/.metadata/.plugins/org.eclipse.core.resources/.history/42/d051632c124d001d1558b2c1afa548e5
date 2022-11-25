@@ -1,0 +1,38 @@
+package sort;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class SortCourseData {
+	
+	public static void main(String[] args) {
+		
+		List<CourseData> courselist = new ArrayList<>();
+		
+		courselist.add(new CourseData(27, "java"));
+		courselist.add(new CourseData(28, "python"));
+		System.out.println(courselist);
+		ArrayList<CourseData> sortedListByPricesAscending = new ArrayList<>();
+		sortedListByPricesAscending = sortByPriceAscending(courselist);
+		System.out.println("sroted list by price ascending");
+		System.out.println(sortedListByPricesAscending);
+		
+	}
+
+	private static ArrayList<CourseData> sortByPriceAscending(ArrayList<CourseData> courselist) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<CourseData> resultList = new ArrayList<>();
+		Collections.sort(courselist, (a,b)->{
+			if(a.getAge()==b.getAge())
+				return 0;
+			else if(a.getAge()>b.getAge())
+				return 1;
+			else return -1;
+		});
+		resultList=courselist;
+		return resultList;
+	}
+	
+	}

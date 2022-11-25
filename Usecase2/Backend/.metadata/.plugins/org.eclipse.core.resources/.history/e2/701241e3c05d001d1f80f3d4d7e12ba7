@@ -1,0 +1,14 @@
+package com.user.microservice.UserMicroService.entity.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Login {
+	
+	private String email_id;
+	
+	private String password;
+	
+	
+
+}

@@ -1,0 +1,34 @@
+package com.user.microservice.UserMicroService.repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+
+
+@Repository
+public interface UserRepository extends JpaRepository<Author, Integer>{
+
+	List<Author> findByCategory(@Param("category") String category);
+	
+	List<Author> findByTitle(@Param("title") String title);
+	
+	List<Author> findByAuthor(@Param("author") String author);
+	
+	List<Author> findByPublisher(@Param("publisher") String publisher);
+	
+	List<Author> findByPrice(@Param("price") Float price);
+	
+	List<Author> findByCategoryTitleAuthorPublisherPrice(@Param("category") String category,
+			@Param("title") String title,
+			@Param("author") String author,
+			@Param("publisher") String publisher,
+			@Param("price") Float price);
+	
+	
+	
+
+}

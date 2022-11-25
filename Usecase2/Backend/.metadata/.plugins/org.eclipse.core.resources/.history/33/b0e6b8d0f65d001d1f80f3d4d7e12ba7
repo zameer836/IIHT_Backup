@@ -1,0 +1,49 @@
+package com.user.microservice.UserMicroService.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.user.microservice.UserMicroService.entity.model.Author;
+import com.user.microservice.UserMicroService.service.AuthorService;
+
+@RestController
+@RequestMapping("api/v1/digitalbooks")
+public class AuthorController {
+	
+	@Autowired
+	AuthorService authService;
+	
+	@PostMapping("author/{author_id}/books")
+	public String createBook(@RequestBody Author author,@PathVariable Integer author_id) {
+		authService.createAuthor(author,author_id);
+		return "Book Created Successfully";
+		
+	}
+	
+	@PutMapping("/author/{author_id}/books")
+	public String editBook(@RequestBody Author author,@PathVariable Integer author_id) throws Exception {
+		authService.saveOrUpdate(author,author_id);
+		return "Book Edited Successfully";
+		
+	}
+	
+	@PostMapping("/author/{author_id}/books/{book-id}")
+	public String changeBlockStatus(@RequestBody Author author,
+			@PathVariable("author_id") Integer author_id,
+			@PathVariable("book-id") Integer book_id,
+			@RequestParam String blocked) {
+		authService.blockStatus(author, author_id,book_id);
+		return null;
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,49 @@
+<style>
+    img{
+        margin-left: 590px;
+
+    }
+
+    button {
+
+     
+    }
+
+    input {
+
+    }
+
+    .usrname-box {
+        margin-left: 600px;
+        margin-bottom: 5px;
+    }
+
+    .pwd-box {
+
+        margin-bottom: 10px;
+
+    }
+
+    .signin-btn {
+
+     margin-left: 630px; 
+     margin-bottom: 50px; 
+     margin-right: 5px;
+    }
+
+    .signup-btn {
+
+    }
+</style>
+
+
+
+<img src="https://cdn.dribbble.com/users/3032358/screenshots/11287340/38a_4x.jpg" width="200px" height="200px">
+
+
+<input  [(ngModel)]="authorsignin.authormailId"   class="usrname-box"  placeholder="Enter the Username">
+
+<input  [(ngModel)]="authorsignin.authorPassword"  class="pwd-box" style="margin-left: 600px;" placeholder="Enter the password">
+<button  routerLink="/success" (click)="save()"    class="signin-btn" >SignIn</button>
+
+<router-outlet></router-outlet>

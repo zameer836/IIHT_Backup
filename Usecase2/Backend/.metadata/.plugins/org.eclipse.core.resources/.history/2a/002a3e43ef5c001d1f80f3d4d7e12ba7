@@ -1,0 +1,10 @@
+package com.user.microservice.UserMicroService.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.user.microservice.UserMicroService.model.Book;
+
+
+public class UserRepository implements JpaRepository<Book, Integer>{
+
+}
